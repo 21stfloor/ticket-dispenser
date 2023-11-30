@@ -43,7 +43,7 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print("Taking the trash");
     // Turn the servo to 45 degrees (right position)
-    servo.write(45);
+    servo.write(90);
     delay(2000); // Adjust this delay to allow time for the servo to reach the desired position
     // Turn the servo back to the initial position (0 degrees)
     servo.write(0);
