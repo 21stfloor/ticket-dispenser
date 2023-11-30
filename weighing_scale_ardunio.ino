@@ -36,7 +36,7 @@ void loop() {
   int ticketCount = i / 10; // Calculate tickets based on 10g per 1 ticket
 
   // Print the Ticket Count on the LCD
-  lcd.setCursor(5, 3);
+  lcd.setCursor(3, 3);
   lcd.print("Ticket Count: " + String(ticketCount));
 
   if (digitalRead(BUTTON_PIN) == LOW && !isDispensing && ticketCount > 0) {
@@ -64,5 +64,7 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print("                    ");
     isDispensing = false; // Reset the dispensing status
+    lcd.setCursor(3, 3);
+    lcd.print("Ticket Count:    ");
   }
 }
