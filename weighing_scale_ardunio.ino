@@ -37,7 +37,7 @@ void loop() {
 
   // Print the Ticket Count on the LCD
   lcd.setCursor(3, 3);
-  lcd.print("Ticket Count: " + String(ticketCount));
+  lcd.print("Ticket Count: " + String(ticketCount) + "  ");
 
   if (digitalRead(BUTTON_PIN) == LOW && !isDispensing && ticketCount > 0) {
     lcd.setCursor(0, 0);
@@ -65,6 +65,4 @@ void loop() {
     lcd.print("                    ");
     isDispensing = false; // Reset the dispensing status
   }
-  lcd.setCursor(3, 3);
-  lcd.print("Ticket Count:      ");
 }
