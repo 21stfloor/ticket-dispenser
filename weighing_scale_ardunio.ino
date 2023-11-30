@@ -66,5 +66,5 @@ void loop() {
     isDispensing = false; // Reset the dispensing status
   }
   lcd.setCursor(3, 3);
-  lcd.print("Ticket Count:    ");
+  lcd.print("Ticket Count:      ");
 }
